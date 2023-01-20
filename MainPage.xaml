@@ -2,7 +2,8 @@
 <ContentPage
     x:Class="cinema_tickets_booking_app.MainPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Name="mainPage">
     <Shell.TitleView>
         <Grid
             Margin="0,0,0,8"
@@ -72,7 +73,7 @@
                 <CollectionView
                     Margin="0,6"
                     ItemsSource="{Binding MovieListData}"
-                    SelectionMode="Single"
+                    SelectionMode="None"
                     VerticalScrollBarVisibility="Never">
                     <CollectionView.ItemsLayout>
                         <GridItemsLayout
@@ -124,6 +125,9 @@
                                     Text="{Binding Category}"
                                     TextColor="Grey"
                                     VerticalOptions="Center" />
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding Source={x:Reference mainPage}, Path=BindingContext.TapCommand}" CommandParameter="{Binding .}" />
+                                </StackLayout.GestureRecognizers>
                             </StackLayout>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>

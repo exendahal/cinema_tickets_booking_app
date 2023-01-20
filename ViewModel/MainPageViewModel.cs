@@ -24,6 +24,12 @@ namespace cinema_tickets_booking_app.ViewModel
         public MainPageViewModel()
         {
             PopulateData();
+            TapCommand = new Command<MovieModel>(SelectMovie);
+        }
+
+        private void SelectMovie(MovieModel obj)
+        {
+            
         }
 
         void PopulateData()
