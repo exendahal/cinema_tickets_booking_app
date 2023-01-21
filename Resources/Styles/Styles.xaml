@@ -412,4 +412,13 @@
         <Setter Property="HorizontalOptions" Value="Center" />
         <Setter Property="HorizontalTextAlignment" Value="Center" />
     </Style>
+
+    <Style x:Key="BackStyle" TargetType="Button">
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource IconMain}, Dark={StaticResource IconMain}}" />
+        <Setter Property="FontSize" Value="42" />
+        <Setter Property="FontFamily" Value="CinemaIcons" />
+        <Setter Property="VerticalOptions" Value="Center" />
+        <Setter Property="HorizontalOptions" Value="Center" />
+        <Setter Property="BackgroundColor" Value="Transparent" />
+    </Style>
 </ResourceDictionary>

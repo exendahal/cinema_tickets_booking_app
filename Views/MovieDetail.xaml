@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="cinema_tickets_booking_app.Views.MovieDetail"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:mct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    xmlns:views="clr-namespace:cinema_tickets_booking_app.Views"
+    Shell.FlyoutBehavior="Disabled"
+    Shell.NavBarIsVisible="False">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="{StaticResource Deep}" Spacing="0">
+            <Grid VerticalOptions="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button
+                    Grid.Column="0"
+                    Padding="0,0,0,10"
+                    Clicked="Button_Clicked"
+                    HorizontalOptions="Start"
+                    Style="{StaticResource BackStyle}"
+                    Text="&#xe906;"
+                    VerticalOptions="Center" />
+
+                <Label
+                    Grid.Column="1"
+                    FontSize="20"
+                    HorizontalOptions="Center"
+                    HorizontalTextAlignment="Center"
+                    Text="{Binding Title}"
+                    TextColor="{StaticResource White}"
+                    VerticalOptions="Center"
+                    VerticalTextAlignment="Center" />
+            </Grid>
+            <ScrollView>
+                <StackLayout Spacing="0">
+                    <Border
+                        BackgroundColor="Transparent"
+                        StrokeShape="RoundRectangle 0"
+                        StrokeThickness="0">
+                        <Image
+                            Aspect="AspectFill"
+                            HeightRequest="200"
+                            Source="{Binding MovieData.ImageUrl}" />
+                    </Border>
+                    <Grid Margin="0,16">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <StackLayout
+                            Grid.Column="0"
+                            HorizontalOptions="End"
+                            Spacing="0">
+                            <Label
+                                FontSize="20"
+                                HorizontalTextAlignment="Center"
+                                Text="{Binding MovieData.ImdbRating}"
+                                TextColor="White"
+                                VerticalOptions="Center" />
+                            <Label
+                                Margin="0"
+                                FontSize="14"
+                                HorizontalTextAlignment="Center"
+                                Text="IMDB"
+                                TextColor="Grey"
+                                VerticalOptions="Center" />
+                        </StackLayout>
+
+                        <StackLayout
+                            Grid.Column="2"
+                            HorizontalOptions="Start"
+                            Spacing="0">
+                            <Label
+                                FontSize="20"
+                                HorizontalTextAlignment="Center"
+                                Text="{Binding MovieData.KinopoiskRating}"
+                                TextColor="White"
+                                VerticalOptions="Center" />
+                            <Label
+                                Margin="0"
+                                FontSize="14"
+                                HorizontalTextAlignment="Center"
+                                Text="Kinopoisk"
+                                TextColor="Grey"
+                                VerticalOptions="Center" />
+                        </StackLayout>
+                    </Grid>
+                    <StackLayout
+                        Padding="12,16"
+                        BackgroundColor="{StaticResource Main}"
+                        HorizontalOptions="FillAndExpand"
+                        Spacing="0">
+                        <Label
+                            FontSize="14"
+                            HorizontalTextAlignment="Start"
+                            Text="{Binding MovieData.Description}"
+                            TextColor="White"
+                            VerticalOptions="Center" />
+
+                        <Grid Margin="0,12" RowSpacing="8">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="8" />
+                                <ColumnDefinition Width="3*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Label
+                                Grid.Column="0"
+                                FontSize="14"
+                                HorizontalTextAlignment="Start"
+                                Text="Certificate"
+                                TextColor="Grey"
+                                VerticalOptions="Start"
+                                VerticalTextAlignment="Start" />
+                            <Border
+                                Grid.Column="2"
+                                Padding="8,2"
+                                BackgroundColor="Transparent"
+                                HorizontalOptions="Start"
+                                Stroke="Gray"
+                                StrokeShape="RoundRectangle 4"
+                                StrokeThickness="1"
+                                VerticalOptions="StartAndExpand">
+                                <Label
+                                    FontSize="14"
+                                    HorizontalTextAlignment="Start"
+                                    Text="{Binding MovieData.Certificate}"
+                                    TextColor="White"
+                                    VerticalOptions="Start"
+                                    VerticalTextAlignment="Start" />
+                            </Border>
+
+
+                            <Label
+                                Grid.Row="1"
+                                Grid.Column="0"
+                                FontSize="14"
+                                HorizontalTextAlignment="Start"
+                                Text="Runtime"
+                                TextColor="Grey"
+                                VerticalOptions="Start"
+                                VerticalTextAlignment="Start" />
+
+                            <Label
+                                Grid.Row="1"
+                                Grid.Column="2"
+                                FontSize="14"
+                                HorizontalTextAlignment="Start"
+                                Text="{Binding MovieData.Runtime}"
+                                TextColor="White"
+                                VerticalOptions="Start"
+                                VerticalTextAlignment="Start" />
+
+                            <Label
+                                Grid.Row="2"
+                                Grid.Column="0"
+                                FontSize="14"
+                                HorizontalTextAlignment="Start"
+                                Text="Release"
+                                TextColor="Grey"
+                                VerticalOptions="Start"
+                                VerticalTextAlignment="Start" />
+
+                            <Label
+                                Grid.Row="2"
+                                Grid.Column="2"
+                                FontSize="14"
+                                HorizontalTextAlignment="Start"
+                                Text="{Binding MovieData.Release}"
+                                TextColor="White"
+                                VerticalOptions="Start"
+                                VerticalTextAlignment="Start" />
+
+                            <Label
+                                Grid.Row="3"
+                                Grid.Column="0"
+                                FontSize="14"
+                                HorizontalTextAlignment="Start"
+                                Text="Genure"
+                                TextColor="Grey"
+                                VerticalOptions="Start"
+                                VerticalTextAlignment="Start" />
+
+                            <Label
+                                Grid.Row="3"
+                                Grid.Column="2"
+                                FontSize="14"
+                                HorizontalTextAlignment="Start"
+                                Text="{Binding MovieData.Category}"
+                                TextColor="White"
+                                VerticalOptions="Start"
+                                VerticalTextAlignment="Start" />
+
+                            <Label
+                                Grid.Row="4"
+                                Grid.Column="0"
+                                FontSize="14"
+                                HorizontalTextAlignment="Start"
+                                Text="Director"
+                                TextColor="Grey"
+                                VerticalOptions="Start"
+                                VerticalTextAlignment="Start" />
+
+                            <Label
+                                Grid.Row="4"
+                                Grid.Column="2"
+                                FontSize="14"
+                                HorizontalTextAlignment="Start"
+                                Text="{Binding MovieData.Director}"
+                                TextColor="White"
+                                VerticalOptions="Start"
+                                VerticalTextAlignment="Start" />
+
+                            <Label
+                                Grid.Row="5"
+                                Grid.Column="0"
+                                FontSize="14"
+                                HorizontalTextAlignment="Start"
+                                Text="Cast"
+                                TextColor="Grey"
+                                VerticalOptions="Start"
+                                VerticalTextAlignment="Start" />
+
+                            <Label
+                                Grid.Row="5"
+                                Grid.Column="2"
+                                FontSize="14"
+                                HorizontalTextAlignment="Start"
+                                Text="{Binding MovieData.Cast}"
+                                TextColor="White"
+                                VerticalOptions="Start"
+                                VerticalTextAlignment="Start" />
+                        </Grid>
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+            <Button
+                Margin="18"
+                Padding="14"
+                BackgroundColor="{StaticResource Button}"
+                CornerRadius="8"
+                FontAttributes="Bold"
+                FontSize="18"
+                Text="Select session"
+                VerticalOptions="EndAndExpand" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

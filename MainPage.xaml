@@ -103,7 +103,7 @@
                                             Margin="12,4"
                                             FontSize="10"
                                             HorizontalTextAlignment="Center"
-                                            Text="{Binding Rating}"
+                                            Text="{Binding ImdbRating}"
                                             TextColor="White"
                                             VerticalTextAlignment="Center" />
                                     </Border>

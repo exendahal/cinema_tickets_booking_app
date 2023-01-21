@@ -2,10 +2,18 @@
 {
     public class MovieModel
     {
-        public double Rating { get; set; }
+        public double ImdbRating { get; set; }
+        public double KinopoiskRating { get; set; }
         public string Name { get; set; }
         public string ImageUrl { get; set; }
+        public string VideoUrl { get; set; }
         public string Category { get; set; }
-        public Color RatingColor { get { return Rating >= 7 ? Color.FromArgb("#FF8036") : Color.FromArgb("#1A2232"); } }
+        public string Description { get; set; }
+        public string Certificate { get; set; }
+        public string Runtime { get; set; }
+        public string Release { get; set; }
+        public string Director { get; set; }
+        public string Cast { get; set; }
+        public Color RatingColor { get { return ImdbRating >= 7 ? Color.FromArgb("#FF8036") : Color.FromArgb("#1A2232"); } }
     }
 }
