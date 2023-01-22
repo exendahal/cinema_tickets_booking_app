@@ -1,4 +1,5 @@
 ﻿using cinema_tickets_booking_app.Model;
+using cinema_tickets_booking_app.Views;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
 
@@ -53,9 +54,9 @@ namespace cinema_tickets_booking_app.ViewModel
             TapCommand = new Command<SessionModel>(SelectSession);
         }
 
-        private void SelectSession(SessionModel data)
+        private async void SelectSession(SessionModel sessionData)
         {
-            
+            await App.Current.MainPage.Navigation.PushAsync((new BookingPage(MovieData, sessionData)));
         }
 
         void PopulateData(MovieModel data)

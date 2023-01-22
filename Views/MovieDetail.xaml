@@ -311,6 +311,7 @@
                         FontSize="18"
                         HeightRequest="50"
                         Text="Select session"
+                        TextColor="White"
                         VerticalOptions="EndAndExpand" />
                 </StackLayout>
             </ScrollView>
@@ -336,6 +337,7 @@
                         HorizontalOptions="CenterAndExpand"
                         Spacing="2">
                         <Label
+                            Margin="0,6,0,0"
                             HorizontalOptions="CenterAndExpand"
                             Style="{StaticResource IconStyle}"
                             Text="&#xe905;" />
@@ -353,6 +355,7 @@
                         HorizontalOptions="CenterAndExpand"
                         Spacing="2">
                         <Label
+                            Margin="0,6,0,0"
                             HorizontalOptions="CenterAndExpand"
                             Style="{StaticResource IconStyle}"
                             Text="&#xe904;" />
@@ -368,7 +371,7 @@
                         Grid.Row="0"
                         Grid.Column="2"
                         HorizontalOptions="CenterAndExpand"
-                        Spacing="2"
+                        Spacing="0"
                         VerticalOptions="CenterAndExpand">
                         <Switch HorizontalOptions="Center" VerticalOptions="Center" />
                         <Label
@@ -385,7 +388,9 @@
                         Padding="0,16"
                         BackgroundColor="{StaticResource DeepSecondary}">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="2*" />
+                            <ColumnDefinition Width="0.1" />
+                            <ColumnDefinition Width="16" />
                             <ColumnDefinition Width="*" />
                             <ColumnDefinition Width="*" />
                             <ColumnDefinition Width="*" />
@@ -400,7 +405,7 @@
                             VerticalTextAlignment="Center" />
 
                         <Label
-                            Grid.Column="1"
+                            Grid.Column="3"
                             FontSize="16"
                             HorizontalTextAlignment="Center"
                             Text="Adult"
@@ -408,21 +413,21 @@
                             VerticalTextAlignment="Center" />
 
                         <Label
-                            Grid.Column="2"
+                            Grid.Column="4"
                             FontSize="16"
                             HorizontalTextAlignment="Center"
                             Text="Child"
                             TextColor="{StaticResource TxtSecondary}"
                             VerticalTextAlignment="Center" />
                         <Label
-                            Grid.Column="3"
+                            Grid.Column="5"
                             FontSize="16"
                             HorizontalTextAlignment="Center"
                             Text="Student"
                             TextColor="{StaticResource TxtSecondary}"
                             VerticalTextAlignment="Center" />
                         <Label
-                            Grid.Column="4"
+                            Grid.Column="6"
                             FontSize="16"
                             HorizontalTextAlignment="Center"
                             Text="VIP"

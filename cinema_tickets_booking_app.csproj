@@ -12,7 +12,7 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 
 		<!-- Display name -->
-		<ApplicationTitle>cinema_tickets_booking_app</ApplicationTitle>
+		<ApplicationTitle>Ticket Booking App</ApplicationTitle>
 
 		<!-- App Identifier -->
 		<ApplicationId>com.companyname.cinema_tickets_booking_app</ApplicationId>
@@ -65,6 +65,9 @@
 
 	<ItemGroup>
 	  <MauiXaml Update="Views\About.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\BookingPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\MovieDetail.xaml">

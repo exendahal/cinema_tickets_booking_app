@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="cinema_tickets_booking_app.Views.BookingPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Name="bookingPage"
+    Shell.FlyoutBehavior="Disabled"
+    Shell.NavBarIsVisible="False">
+    <Grid BackgroundColor="{StaticResource Deep}" VerticalOptions="FillAndExpand">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" RowSpacing="12">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="4*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button
+                    Grid.Column="0"
+                    Padding="0,0,0,10"
+                    Clicked="ButtonClickedBack"
+                    HorizontalOptions="Start"
+                    Style="{StaticResource BackStyle}"
+                    Text="&#xe906;"
+                    VerticalOptions="Center" />
+                <StackLayout
+                    Grid.Column="1"
+                    Margin="0,6"
+                    Spacing="0">
+                    <Label
+                        FontSize="20"
+                        HorizontalOptions="Center"
+                        HorizontalTextAlignment="Center"
+                        Text="{Binding SessionPlace}"
+                        TextColor="{StaticResource White}"
+                        VerticalOptions="Center"
+                        VerticalTextAlignment="Center" />
+
+                    <Label
+                        FontSize="16"
+                        HorizontalOptions="Center"
+                        HorizontalTextAlignment="Center"
+                        Text="{Binding Title}"
+                        TextColor="Gray"
+                        VerticalOptions="Center"
+                        VerticalTextAlignment="Center" />
+                </StackLayout>
+                <Button
+                    Grid.Column="2"
+                    Padding="0,0,0,10"
+                    Clicked="ButtonClickedZoom"
+                    HorizontalOptions="Start"
+                    Style="{StaticResource BackStyle}"
+                    Text="&#xe90c;"
+                    VerticalOptions="Center" />
+            </Grid>
+            <Grid
+                Grid.Row="1"
+                Margin="12,18,12,10"
+                ColumnSpacing="18">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Border
+                    Grid.Column="0"
+                    BackgroundColor="Transparent"
+                    Stroke="Gray"
+                    StrokeShape="RoundRectangle 6"
+                    StrokeThickness="1">
+                    <StackLayout
+                        Padding="0,8"
+                        HorizontalOptions="CenterAndExpand"
+                        Orientation="Horizontal"
+                        Spacing="8"
+                        VerticalOptions="Center">
+                        <Label
+                            Style="{StaticResource IconStyle}"
+                            Text="&#xe905;"
+                            VerticalTextAlignment="Center" />
+                        <Label
+                            FontSize="16"
+                            Text="April, 18"
+                            TextColor="{StaticResource White}"
+                            VerticalTextAlignment="Center" />
+                    </StackLayout>
+                </Border>
+
+                <Border
+                    Grid.Column="1"
+                    BackgroundColor="Transparent"
+                    Stroke="Gray"
+                    StrokeShape="RoundRectangle 6"
+                    StrokeThickness="1">
+                    <StackLayout
+                        Padding="0,8"
+                        HorizontalOptions="CenterAndExpand"
+                        Orientation="Horizontal"
+                        Spacing="8"
+                        VerticalOptions="CenterAndExpand">
+                        <Label
+                            Style="{StaticResource IconStyle}"
+                            Text="&#xe910;"
+                            VerticalTextAlignment="Center" />
+                        <Label
+                            FontSize="16"
+                            Text="15:30"
+                            TextColor="{StaticResource White}"
+                            VerticalTextAlignment="Center" />
+                    </StackLayout>
+                </Border>
+            </Grid>
+        </Grid>
+        <Grid
+            Grid.Row="1"
+            BackgroundColor="{StaticResource Main}"
+            VerticalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="{Binding ListWidth}" />
+            </Grid.RowDefinitions>
+            <Grid
+                Grid.Row="0"
+                Margin="18"
+                ColumnSpacing="4"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="CenterAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="24" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="8" />
+                    <ColumnDefinition Width="24" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="8" />
+                    <ColumnDefinition Width="24" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="8" />
+                </Grid.ColumnDefinitions>
+                <Border
+                    Grid.Column="0"
+                    BackgroundColor="{StaticResource Deep}"
+                    HeightRequest="20"
+                    Stroke="{StaticResource Deep}"
+                    StrokeShape="RoundRectangle 10"
+                    WidthRequest="20" />
+                <Label
+                    Grid.Column="1"
+                    FontSize="16"
+                    Text="Available"
+                    TextColor="{StaticResource White}"
+                    VerticalTextAlignment="Center" />
+
+                <Border
+                    Grid.Column="3"
+                    BackgroundColor="{StaticResource Deep}"
+                    HeightRequest="20"
+                    HorizontalOptions="CenterAndExpand"
+                    Stroke="{StaticResource Deep}"
+                    StrokeShape="RoundRectangle 10"
+                    VerticalOptions="CenterAndExpand"
+                    WidthRequest="20">
+                    <Label
+                        FontSize="6"
+                        HorizontalTextAlignment="Center"
+                        Text="x"
+                        TextColor="{StaticResource White}"
+                        VerticalTextAlignment="Center" />
+                </Border>
+                <Label
+                    Grid.Column="4"
+                    FontSize="16"
+                    Text="Occupied"
+                    TextColor="{StaticResource White}"
+                    VerticalTextAlignment="Center" />
+                <Border
+                    Grid.Column="6"
+                    BackgroundColor="{StaticResource Button}"
+                    HeightRequest="20"
+                    Stroke="{StaticResource Button}"
+                    StrokeShape="RoundRectangle 10"
+                    WidthRequest="20" />
+                <Label
+                    Grid.Column="7"
+                    FontSize="16"
+                    Text="Chosen"
+                    TextColor="{StaticResource White}"
+                    VerticalTextAlignment="Center" />
+            </Grid>
+            <Grid Grid.Row="1">
+                <Grid ColumnSpacing="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <CollectionView
+                        Grid.Column="1"
+                        Margin="0,18,12,18"
+                        HorizontalOptions="End"
+                        HorizontalScrollBarVisibility="Always"
+                        ItemsSource="{Binding SeatData.SeatIndex}"
+                        SelectionMode="None">
+                        <CollectionView.ItemsLayout>
+                            <GridItemsLayout
+                                Orientation="Vertical"
+                                Span="1"
+                                VerticalItemSpacing="12" />
+                        </CollectionView.ItemsLayout>
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Border
+                                    BackgroundColor="Transparent"
+                                    HeightRequest="52"
+                                    HorizontalOptions="CenterAndExpand"
+                                    Stroke="Transparent"
+                                    VerticalOptions="CenterAndExpand">
+                                    <Label
+                                        FontSize="14"
+                                        HorizontalTextAlignment="Center"
+                                        Text="{Binding .}"
+                                        TextColor="Gray"
+                                        VerticalTextAlignment="Center" />
+                                </Border>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                    <CollectionView
+                        Grid.Column="0"
+                        Margin="18,18,6,18"
+                        HorizontalOptions="FillAndExpand"
+                        HorizontalScrollBarVisibility="Always"
+                        ItemsSource="{Binding SeatData.SeatDetail}"
+                        SelectionMode="None">
+                        <CollectionView.ItemsLayout>
+                            <GridItemsLayout
+                                HorizontalItemSpacing="12"
+                                Orientation="Horizontal"
+                                Span="{Binding SeatData.RowCount}"
+                                VerticalItemSpacing="12" />
+                        </CollectionView.ItemsLayout>
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Border
+                                    BackgroundColor="{Binding SelectColor}"
+                                    HeightRequest="52"
+                                    HorizontalOptions="CenterAndExpand"
+                                    IsVisible="{Binding Visibility}"
+                                    Stroke="{Binding SelectColor}"
+                                    StrokeShape="RoundRectangle 8"
+                                    VerticalOptions="CenterAndExpand"
+                                    WidthRequest="52">
+                                    <Label
+                                        FontSize="14"
+                                        HorizontalTextAlignment="Center"
+                                        Text="{Binding SeatName}"
+                                        TextColor="White"
+                                        VerticalTextAlignment="Center" />
+                                    <Border.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding Source={x:Reference bookingPage}, Path=BindingContext.TapCommand}" CommandParameter="{Binding .}" />
+                                    </Border.GestureRecognizers>
+                                </Border>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </Grid>
+
+            </Grid>
+        </Grid>
+    </Grid>
+</ContentPage>

@@ -7,17 +7,17 @@
     <Shell.TitleView>
         <Grid
             Margin="0,0,0,8"
-            ColumnSpacing="0"
+            ColumnSpacing="6"
             VerticalOptions="CenterAndExpand">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="16" />
+                <ColumnDefinition Width="12" />
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="16" />
+                <ColumnDefinition Width="12" />
             </Grid.ColumnDefinitions>
 
             <Label
@@ -26,7 +26,6 @@
                 Text="&#xe902;" />
             <Label
                 Grid.Column="3"
-                Margin="4,12,0,0"
                 FontSize="16"
                 Text="KTM"
                 TextColor="{StaticResource White}"
@@ -38,19 +37,17 @@
                 Text="&#xe900;" />
             <Label
                 Grid.Column="5"
-                Margin="4,12,0,0"
                 FontSize="16"
                 Text="Eng"
                 TextColor="{StaticResource White}"
                 VerticalOptions="Center" />
             <Button
                 Grid.Column="6"
-                Margin="0,6,0,0"
-                Padding="12,0"
+                Padding="6,0"
                 BackgroundColor="{StaticResource Button}"
                 CornerRadius="6"
                 FontSize="16"
-                HorizontalOptions="Center"
+                HorizontalOptions="FillAndExpand"
                 Text="Log in"
                 TextColor="{StaticResource White}" />
         </Grid>

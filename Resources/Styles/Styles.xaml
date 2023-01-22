@@ -411,6 +411,7 @@
         <Setter Property="VerticalOptions" Value="Center" />
         <Setter Property="HorizontalOptions" Value="Center" />
         <Setter Property="HorizontalTextAlignment" Value="Center" />
+        <Setter Property="Margin" Value="0,-16,0,0"></Setter>
     </Style>
 
     <Style x:Key="BackStyle" TargetType="Button">
