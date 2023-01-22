@@ -5,6 +5,8 @@
     <Color x:Key="Button">#FF8036</Color>
     <Color x:Key="Main">#1A2232</Color>
     <Color x:Key="Deep">#202B40</Color>
+    <Color x:Key="DeepSecondary">#253554</Color>
+    <Color x:Key="TxtSecondary">#637394</Color>
     <Color x:Key="IconMain">#637394</Color>
     <Color x:Key="Primary">#512BD4</Color>
     <Color x:Key="Secondary">#DFD8F7</Color>
