@@ -127,6 +127,7 @@
             VerticalOptions="FillAndExpand">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
                 <RowDefinition Height="{Binding ListWidth}" />
             </Grid.RowDefinitions>
             <Grid
@@ -196,7 +197,24 @@
                     TextColor="{StaticResource White}"
                     VerticalTextAlignment="Center" />
             </Grid>
-            <Grid Grid.Row="1">
+            <StackLayout
+                Grid.Row="1"
+                Margin="18,12,18,24"
+                HorizontalOptions="FillAndExpand"
+                Spacing="1">
+                <Label
+                    FontSize="16"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Screen"
+                    TextColor="{StaticResource IconMain}"
+                    VerticalTextAlignment="Center" />
+
+                <Border
+                    Margin="0,8,0,0"
+                    Stroke="{StaticResource IconMain}"
+                    StrokeThickness="0.6" />
+            </StackLayout>
+            <Grid Grid.Row="2">
                 <Grid ColumnSpacing="0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" />
