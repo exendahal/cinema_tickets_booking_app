@@ -16,4 +16,4 @@ Link: https://andreinitescu.github.io/IconFont2Code/
 <img  src="Preview/1.png" width="250" height="520"> &nbsp;&nbsp;&nbsp; 
 <img src="Preview/2.png" width="250" height="520"> &nbsp;&nbsp;&nbsp; 
 <img src="Preview/3.png" width="250" height="520"> <br>
-<img  src="Preview/4.png" width="250" height="520"> &nbsp;&nbsp
+<img  src="Preview/4.png" width="250" height="520">
